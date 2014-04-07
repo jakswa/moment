@@ -2366,7 +2366,7 @@
         // for Closure Compiler "advanced" mode
         if (deprecate) {
             global.moment = function () {
-                if (!warned && console && console.warn) {
+                if (!warned && typeof console !== 'undefined' && console.warn) {
                     warned = true;
                     console.warn(
                             "Accessing Moment through the global scope is " +
